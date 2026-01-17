@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+
+        function abcd(){
+            var no = Math.floor(Math.random() * 6)
+            var pr = new Promise((res, rej) => {
+            if (no > 4) {
+                return res();
+            } else {
+                return rej();
+            }
+        })
+
+        pr.then(function(){
+            console.log('Success');
+        })
+        pr.catch(function(){
+            console.log('Failure');
+        })
+
+        }
+        abcd();
+    </script>
+
+</body>
+
+</html>
